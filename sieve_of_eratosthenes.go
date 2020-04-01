@@ -22,8 +22,8 @@ func main() {
 	primString = strings.TrimSuffix(primString, "\n")
 
 	primInt, err = strconv.Atoi(primString)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Please insert an integer!")
+	if err != nil || primInt < 0 {
+		fmt.Fprintf(os.Stderr, "Please insert an natural number!")
 		os.Exit(1)
 	}
 
